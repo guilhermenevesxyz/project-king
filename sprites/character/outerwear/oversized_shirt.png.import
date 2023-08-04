@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lo5wydiasns6"
-path="res://.godot/imported/oversized_shirt.png-f5580031133ee2199e076eb4f569e1c9.ctex"
+path="res://.godot/imported/oversized_shirt.png-39d4d29368c6ac465b93710aba56630d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/character/overshirt/oversized_shirt.png"
-dest_files=["res://.godot/imported/oversized_shirt.png-f5580031133ee2199e076eb4f569e1c9.ctex"]
+source_file="res://sprites/character/outerwear/oversized_shirt.png"
+dest_files=["res://.godot/imported/oversized_shirt.png-39d4d29368c6ac465b93710aba56630d.ctex"]
 
 [params]
 

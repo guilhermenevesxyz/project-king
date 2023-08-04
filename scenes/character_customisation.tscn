@@ -1,3 +1,171 @@
-[gd_scene format=3 uid="uid://n8f3s00a1x6f"]
+[gd_scene load_steps=2 format=3 uid="uid://n8f3s00a1x6f"]
+
+[ext_resource type="Texture2D" uid="uid://cgu3q3udjivl5" path="res://sprites/character/character_base_white.png" id="1_pgg6m"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 800.0
+offset_bottom = 600.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Character Customisation"
+
+[node name="Skin" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "Fair Skin"
+popup/item_0/id = 0
+popup/item_1/text = "Dark Skin"
+popup/item_1/id = 1
+
+[node name="Hair" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 5
+selected = 1
+popup/item_0/text = "Bald"
+popup/item_0/id = 0
+popup/item_1/text = "Buzz Cut"
+popup/item_1/id = 1
+popup/item_2/text = "Crew Cut"
+popup/item_2/id = 2
+popup/item_3/text = "Medium-Length Hair"
+popup/item_3/id = 3
+popup/item_4/text = "Long Hair"
+popup/item_4/id = 4
+
+[node name="Moustache" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "Clean-Shaven Moustache"
+popup/item_0/id = 0
+popup/item_1/text = "Pencil Moustache"
+popup/item_1/id = 1
+popup/item_2/text = "Chevron Moustache"
+popup/item_2/id = 2
+
+[node name="Chin" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 4
+selected = 0
+popup/item_0/text = "Clean-Shaven Chin"
+popup/item_0/id = 0
+popup/item_1/text = "Soul Patch"
+popup/item_1/id = 1
+popup/item_2/text = "Goatee"
+popup/item_2/id = 2
+popup/item_3/text = "Chin Puff"
+popup/item_3/id = 3
+
+[node name="Sideburns" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "Clean-Shaven Sideburns"
+popup/item_0/id = 0
+popup/item_1/text = "Cheek Stubble"
+popup/item_1/id = 1
+popup/item_2/text = "Mutton Chops"
+popup/item_2/id = 2
+
+[node name="Shirt" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 4
+selected = 0
+popup/item_0/text = "Shirtless"
+popup/item_0/id = 0
+popup/item_1/text = "T-Shirt"
+popup/item_1/id = 1
+popup/item_2/text = "Collar Shirt"
+popup/item_2/id = 2
+popup/item_3/text = "Crop Top"
+popup/item_3/id = 3
+
+[node name="Trousers" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 7
+selected = 0
+popup/item_0/text = "Bottomless"
+popup/item_0/id = 0
+popup/item_1/text = "Jeans"
+popup/item_1/id = 1
+popup/item_2/text = "Chinos"
+popup/item_2/id = 2
+popup/item_3/text = "Joggers"
+popup/item_3/id = 3
+popup/item_4/text = "Cargo Pants"
+popup/item_4/id = 4
+popup/item_5/text = "Britches"
+popup/item_5/id = 5
+popup/item_6/text = "Panties"
+popup/item_6/id = 6
+
+[node name="Shoes" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "Barefoot"
+popup/item_0/id = 0
+popup/item_1/text = "Trainers"
+popup/item_1/id = 1
+popup/item_2/text = "Oxford Shoes"
+popup/item_2/id = 2
+
+[node name="Outerwear" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 7
+selected = 0
+popup/item_0/text = "Uncovered"
+popup/item_0/id = 0
+popup/item_1/text = "Jacket"
+popup/item_1/id = 1
+popup/item_2/text = "Hoodie"
+popup/item_2/id = 2
+popup/item_3/text = "Coat"
+popup/item_3/id = 3
+popup/item_4/text = "Overshirt"
+popup/item_4/id = 4
+popup/item_5/text = "Oversized Shirt"
+popup/item_5/id = 5
+popup/item_6/text = "Vest"
+popup/item_6/id = 6
+
+[node name="Hats" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 7
+selected = 0
+popup/item_0/text = "Bareheaded"
+popup/item_0/id = 0
+popup/item_1/text = "Baseball Cap"
+popup/item_1/id = 1
+popup/item_2/text = "Beanie"
+popup/item_2/id = 2
+popup/item_3/text = "Flat Cap"
+popup/item_3/id = 3
+popup/item_4/text = "Fedora"
+popup/item_4/id = 4
+popup/item_5/text = "Bowler"
+popup/item_5/id = 5
+popup/item_6/text = "Straw Hat"
+popup/item_6/id = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_pgg6m")
+stretch_mode = 5

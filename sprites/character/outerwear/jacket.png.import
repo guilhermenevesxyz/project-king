@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfjkh00pnvfcv"
-path="res://.godot/imported/coat.png-f6ebd4c0c4b558e58bfb7c4b281af23d.ctex"
+uid="uid://bwrtg0f5c37m0"
+path="res://.godot/imported/jacket.png-7686cae4744862c8fa271960d5743c38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/character/overshirt/coat.png"
-dest_files=["res://.godot/imported/coat.png-f6ebd4c0c4b558e58bfb7c4b281af23d.ctex"]
+source_file="res://sprites/character/outerwear/jacket.png"
+dest_files=["res://.godot/imported/jacket.png-7686cae4744862c8fa271960d5743c38.ctex"]
 
 [params]
 
