@@ -1,34 +1,52 @@
-[gd_scene load_steps=3 format=3 uid="uid://n8f3s00a1x6f"]
+[gd_scene load_steps=5 format=3 uid="uid://n8f3s00a1x6f"]
 
 [ext_resource type="Texture2D" uid="uid://cgu3q3udjivl5" path="res://sprites/character/character_base_white.png" id="1_pgg6m"]
-[ext_resource type="Script" path="res://scenes/CharacterCustomisation.gd" id="1_u1lub"]
+[ext_resource type="Script" path="res://scripts/CharacterCustomisation.gd" id="1_x1457"]
+[ext_resource type="Script" path="res://scripts/CustomisationCenteredMarginContainer.gd" id="2_eiqtp"]
 
-[node name="Control" type="Control"]
+[sub_resource type="Theme" id="Theme_2cgc7"]
+Button/font_sizes/font_size = 8
+Label/font_sizes/font_size = 8
+PopupMenu/font_sizes/font_separator_size = 8
+PopupMenu/font_sizes/font_size = 8
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_u1lub")
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_2cgc7")
+script = ExtResource("1_x1457")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 800.0
-offset_bottom = 600.0
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 288.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("2_eiqtp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 5
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Character Customisation"
 
-[node name="Skin" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Skin" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 2
 selected = 0
@@ -37,7 +55,7 @@ popup/item_0/id = 0
 popup/item_1/text = "Dark Skin"
 popup/item_1/id = 1
 
-[node name="Hair" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Hair" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 5
 selected = 0
@@ -52,7 +70,7 @@ popup/item_3/id = 3
 popup/item_4/text = "Long Hair"
 popup/item_4/id = 4
 
-[node name="Moustache" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Moustache" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 3
 selected = 0
@@ -63,7 +81,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Chevron Moustache"
 popup/item_2/id = 2
 
-[node name="Chin" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Chin" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 4
 selected = 0
@@ -76,7 +94,7 @@ popup/item_2/id = 2
 popup/item_3/text = "Chin Puff"
 popup/item_3/id = 3
 
-[node name="Sideburns" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Sideburns" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 3
 selected = 0
@@ -87,7 +105,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Mutton Chops"
 popup/item_2/id = 2
 
-[node name="Shirt" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Shirt" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 4
 selected = 0
@@ -100,7 +118,7 @@ popup/item_2/id = 2
 popup/item_3/text = "Crop Top"
 popup/item_3/id = 3
 
-[node name="Trousers" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Trousers" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 7
 selected = 0
@@ -119,7 +137,7 @@ popup/item_5/id = 5
 popup/item_6/text = "Denim Shorts"
 popup/item_6/id = 6
 
-[node name="Shoes" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Shoes" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 3
 selected = 0
@@ -130,7 +148,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Oxford Shoes"
 popup/item_2/id = 2
 
-[node name="Outerwear" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Outerwear" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 7
 selected = 0
@@ -149,7 +167,7 @@ popup/item_5/id = 5
 popup/item_6/text = "Vest"
 popup/item_6/id = 6
 
-[node name="Hat" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Hat" type="OptionButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 item_count = 7
 selected = 0
@@ -168,79 +186,71 @@ popup/item_5/id = 5
 popup/item_6/text = "Straw Hat"
 popup/item_6/id = 6
 
-[node name="Character" type="Control" parent="MarginContainer/HBoxContainer"]
+[node name="Character" type="MarginContainer" parent="Control/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Body" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-layout_mode = 0
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Body" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("1_pgg6m")
 stretch_mode = 5
 
-[node name="Shirt" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Shirt" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[node name="Trousers" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Trousers" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[node name="Outerwear" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Outerwear" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[node name="Shoes" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Shoes" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[node name="Hair" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Hair" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[node name="Hat" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Hat" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[node name="Moustache" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Moustache" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[node name="Chin" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Chin" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[node name="Sideburns" type="TextureRect" parent="MarginContainer/HBoxContainer/Character"]
-offset_right = 346.0
-offset_bottom = 500.0
+[node name="Sideburns" type="TextureRect" parent="Control/MarginContainer/HBoxContainer/Character"]
+layout_mode = 2
 size_flags_horizontal = 3
 stretch_mode = 5
 
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Skin" to="." method="_on_skin_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Hair" to="." method="_on_hair_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Moustache" to="." method="_on_moustache_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Chin" to="." method="_on_chin_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Sideburns" to="." method="_on_sideburns_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Shirt" to="." method="_on_shirt_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Trousers" to="." method="_on_trousers_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Shoes" to="." method="_on_shoes_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Outerwear" to="." method="_on_outerwear_item_selected"]
-[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Hat" to="." method="_on_hat_item_selected"]
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Skin" to="Control" method="_on_skin_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Hair" to="Control" method="_on_hair_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Moustache" to="Control" method="_on_moustache_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Chin" to="Control" method="_on_chin_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Sideburns" to="Control" method="_on_sideburns_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Shirt" to="Control" method="_on_shirt_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Trousers" to="Control" method="_on_trousers_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Shoes" to="Control" method="_on_shoes_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Outerwear" to="Control" method="_on_outerwear_item_selected"]
+[connection signal="item_selected" from="Control/MarginContainer/HBoxContainer/VBoxContainer/Hat" to="Control" method="_on_hat_item_selected"]
