@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqueaam1ul0c8"
-path="res://.godot/imported/top.png-4e060584c3a1f5d79d6c38f7af33ce0e.ctex"
+uid="uid://bm5yin1voxf2y"
+path="res://.godot/imported/nanner_pancakes.png-7a4169f05f9e8c9750afa33b2d283c98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/character/shirt/top.png"
-dest_files=["res://.godot/imported/top.png-4e060584c3a1f5d79d6c38f7af33ce0e.ctex"]
+source_file="res://sprites/nanner_pancakes.png"
+dest_files=["res://.godot/imported/nanner_pancakes.png-7a4169f05f9e8c9750afa33b2d283c98.ctex"]
 
 [params]
 
